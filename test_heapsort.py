@@ -1,3 +1,9 @@
+# =========================================================
+# PROJET ALGO AVANCÉ - Sujet 5 : Tri par Tas (Heapsort)
+# MEMBRE 4 : Andy Hifaliana
+# RÔLE : Validation globale et tests unitaires (unittest)
+# =========================================================
+
 """
 Tests unitaires pour le projet Heapsort.
 Couvre les cas décrits dans le rapport : normal, déjà trié,
@@ -22,7 +28,6 @@ def est_max_heap(tab):
 
 
 class TestHeapify(unittest.TestCase):
-
     def test_construire_max_heap(self):
         tab = [12, 5, 8, 20, 3, 15, 7]
         construire_max_heap(tab)
@@ -32,7 +37,6 @@ class TestHeapify(unittest.TestCase):
 
 
 class TestHeapSort(unittest.TestCase):
-
     def test_normal(self):
         tab = [12, 5, 8, 20, 3, 15, 7]
         heap_sort(tab)

@@ -1,13 +1,12 @@
-"""
-PROJET ALGO AVANCÉ - Sujet 5 : Tri par Tas (Heapsort)
-Implémentation complète en Python (sans heapq ni sorted())
-"""
-
+# =========================================================
+# PROJET ALGO AVANCÉ - Sujet 5 : Tri par Tas (Heapsort)
+# MEMBRE 4 : Andy Hifaliana
+# RÔLE : Implémentation de la fonction principale heap_sort
+# =========================================================
 
 def heapify(tab, n, i):
     """
-    Rétablit la propriété de Max-Heap
-    pour le sous-arbre dont la racine est i.
+    Rétablit la propriété de Max-Heap pour le sous-arbre dont la racine est i.
     n = taille actuelle du tas.
     """
     plus_grand = i
@@ -41,10 +40,10 @@ def construire_max_heap(tab):
 def heap_sort(tab):
     """Trie le tableau dans l'ordre croissant avec Heapsort."""
     n = len(tab)
-
+    
     # Étape 1 : construire le Max-Heap
     construire_max_heap(tab)
-
+    
     # Étape 2 : déplacer le maximum à la fin
     for fin in range(n - 1, 0, -1):
         tab[0], tab[fin] = tab[fin], tab[0]
@@ -58,7 +57,6 @@ def afficher_tableau(tab):
 
 def main():
     print("===== TRI PAR TAS (HEAPSORT) =====")
-
     # Exemple de tableau
     tab = [12, 5, 8, 20, 3, 15, 7]
     print("\nTableau initial :")
